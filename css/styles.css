@@ -16,6 +16,7 @@ h5,
 h6,
 p {
 	margin-top: 0;
+  margin-bottom: 0;
 }
 
 ul {
@@ -46,11 +47,24 @@ img {
 }
 
 body {
+  margin: 0;
   background-color: var(--light-color);
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-size: var(--text-size);
   color: var(--primery-text-color);
+}
+
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
 }
 
 .logo-nav {
@@ -74,9 +88,21 @@ body {
 /* nav */
 .site-nav,
 .contact-nav {
-  padding: 0;
-  list-style: none;
+ display: block;
+ padding-top: 32px;
+ padding-bottom: 32px;
+ display: flex;
+ list-style: none;
 }
+
+.site-nav {
+  margin-left: 94px;
+}
+
+.contact-nav {
+  margin-left: auto;
+}
+
 .site-link,
 .site-link-current {
   font-weight: 500;
@@ -95,6 +121,11 @@ body {
   color: var(--accent-color);
 }
 
+.site-nav .item:not(:last-child),
+.contact-nav .contacts:not(:last-child) {
+  margin-right: 50px;
+}
+
 .contact-link {
   font-weight: 500;
   line-height: 1.14;
@@ -107,22 +138,6 @@ body {
   color: var(--accent-color);
 }
 
-.link-email {
-  position: absolute;
-  width: 135px;
-  height: 16px;
-  left: 1078px;
-  top: 32px;
-}
-
-.link-telephone {
-  position: absolute;
-  width: 122px;
-  height: 16px;
-  left: 1263px;
-  top: 32px;
-}
-
 /*шапка*/
 .hero {
   margin-bottom: 94px;
@@ -132,6 +147,7 @@ body {
 
 .hero > .title-hero {
   margin-bottom: 30px;
+
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -146,6 +162,7 @@ body {
 }
 .button-hero {
   background: var(--accent-color);
+
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border: 1px solid transparent;
   border-radius: 4px;
@@ -183,6 +200,7 @@ body {
 
 .list-features > h3 {
   margin-bottom: 10px;
+
   font-weight: 700;
   line-height: 1.14;
   letter-spacing: 0.03em;
@@ -199,6 +217,7 @@ body {
 /*чем мы занимаемся*/
 .section-style {
   margin-bottom: 50px;
+
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
@@ -207,15 +226,22 @@ body {
   color: var(--primery-text-color);
 }
 
-.working,
-.team {
+.our-working {
   list-style: none;
   margin-bottom: 94px;
 }
 
-/*наша команда*/
+.our-working, .our-team > h2 {
+  margin-bottom: 50px;
+}
+
+/*наша команда */
 .our-team {
   background: var(--light-bg-color);
+}
+
+.our-team > h2 {
+  padding-top: 94px;
 }
 
 .team {
@@ -223,16 +249,20 @@ body {
   font-size: 16px;
   line-height: 1.19px;
   letter-spacing: 0.03em;
+  margin-bottom: 94px;
 }
 
-.list-team > h3 {
-  margin-top: 30px;
+.team img {
+  margin-bottom: 30px;
+}
+
+.team h3 {
   margin-bottom: 10px;
   font-weight: 500;
   color: var(--primery-text-color);
 }
 
-.list-team > p {
+.team p {
   margin-bottom: 30px;
   color: var(--second-test-color);
 }
@@ -267,6 +297,8 @@ body {
 
 /*Портфолио*/
 .buttons {
+  margin-top: 94px;
+  margin-bottom: 34px;
   list-style: none;
   font-weight: 500;
   font-size: 16px;
@@ -278,17 +310,27 @@ body {
 .buttons .filter:hover,
 .buttons .filter:focus {
   cursor: pointer;
+  border-radius: 4px;
   background: var(--accent-color);
   color: var(--light-color);
 }
 
 .filter {
+  border-radius: 4px;
   background: var(--light-bg-color);
   color: var(--primery-text-color);
 }
 
 .progect {
   list-style: none;
+  background: var(--light-color);
+  border: 1px solid #EEEEEE;
+  box-sizing: border-box;
+  margin-bottom: 94px;
+}
+
+.page img {
+  margin-bottom: 20px;
 }
 
 .page p {
@@ -296,11 +338,14 @@ body {
   line-height: 1.87;
   letter-spacing: 0.03em;
   color: var(--second-test-color);
+  margin-bottom: 15px;
 }
+
 .page h2 {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--primery-text-color);
+  margin-bottom: 9px;
 }
