@@ -282,9 +282,7 @@ body {
   margin-left: -30px;
   --grid-item: 4;
 
-
   font-size: 16px;
-  line-height: 1.19px;
   letter-spacing: 0.03em;
 }
 
@@ -321,6 +319,8 @@ body {
 /*подвал*/
 .footer {
   background: var(--dark-bg-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .footer .contact-list {
@@ -329,7 +329,7 @@ body {
 }
 
 .contact-list {
-  margin-top: 20px;
+  padding-top: 20px;
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
@@ -339,6 +339,7 @@ body {
 }
 
 .info {
+  padding-top: 9px;
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
 }
@@ -352,14 +353,13 @@ body {
   padding: 94px 0;
 }
 
-/*
-button, input, optgroup, select, textarea {
-    font-family: inherit;
-    font-size: 100%;
-    line-height: 1.15;
-    margin: 0;
-    border: none;
-} */
+
+button {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+  border: none;
+} 
 
 
 .buttons {
@@ -403,7 +403,7 @@ button, input, optgroup, select, textarea {
 .progect {
   display: flex;
   flex-wrap: wrap;
-  margin-left: -30px;
+  /*margin-left: -30px;*/
   margin-top: -30px;
   --grid-item: 3;
   list-style: none;
@@ -429,6 +429,7 @@ button, input, optgroup, select, textarea {
   display: block;
   border: 1px solid #EEEEEE;
 }
+
 .page p {
   padding-top: 4px;
   padding-bottom: 20px; 
