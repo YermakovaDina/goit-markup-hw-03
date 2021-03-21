@@ -63,19 +63,6 @@ body {
   margin: 0 auto;
 }
 
-.grid {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -30px;
-  /*margin-top: -30px; убрать отступ верхний, решить вопрос с крайнеим правым отступом, расстояние между блоками и h2*/
-}
-
-.grid-item {
-  flex-basis: calc((100% - 30px * var(--grid-item)) / var(--grid-item));
-  margin-left: 30px;
-  /*margin-top: 30px;*/
-}
-
 .main-nav {
   display: flex;
   align-items: center;
@@ -155,7 +142,6 @@ body {
 
 /*шапка*/
 .hero {
-  height: 600px;
   background: var(--dark-bg-color);
   text-align: center;
   padding-top: 200px;
@@ -181,6 +167,7 @@ body {
 .hero .button-hero:focus {
   color: #188CE8;
 }
+
 .button-hero {
   background: var(--accent-color);
 
@@ -280,34 +267,55 @@ body {
 /*наша команда */
 .our-team {
   background: var(--light-bg-color);
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 .our-team > h2 {
   margin-bottom: 50px;
-  padding-top: 94px;
+
 }
 
 .team {
-  display: inline-block;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  --grid-item: 4;
+
+
   font-size: 16px;
   line-height: 1.19px;
   letter-spacing: 0.03em;
-  margin-bottom: 94px;
 }
 
-.team img {
+.team-item > img {
+  margin-bottom: 30px;
+}
+
+.team-item > p {
+  
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--second-test-color);
   margin-bottom: 30px;
 }
 
 .team h3 {
-  margin-bottom: 10px;
+  
   font-weight: 500;
+  text-align: center;
+  letter-spacing: 0.03em;
   color: var(--primery-text-color);
+  margin-bottom: 10px;
 }
 
-.team p {
-  margin-bottom: 30px;
-  color: var(--second-test-color);
+
+.team-item {
+  height: 368px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  flex-basis: calc((100% - 30px * var(--grid-item)) / var(--grid-item));
+  margin-left: 30px;
 }
 
 /*подвал*/
@@ -339,9 +347,13 @@ body {
 }
 
 /*Портфолио*/
+
+.portfolio {
+  padding: 94px 0;
+}
+
 .buttons {
-  margin-top: 94px;
-  margin-bottom: 34px;
+  text-align: center;
   list-style: none;
   font-weight: 500;
   font-size: 16px;
@@ -349,34 +361,67 @@ body {
   letter-spacing: 0.03em;
 }
 
+.buttons-filter {
+  display: inline-block;
+  margin-bottom: 50px;
+  margin-left: 8px;
+  border-style: hidden;
+}
+
+.buttons-filter:first-child {
+  margin-left: 0px;
+}
+
 .buttons .filter-dif,
 .buttons .filter:hover,
 .buttons .filter:focus {
   cursor: pointer;
+  padding: 6px 22px;
   border-radius: 4px;
   background: var(--accent-color);
   color: var(--light-color);
 }
 
 .filter {
+  padding: 6px 22px; 
   border-radius: 4px;
   background: var(--light-bg-color);
   color: var(--primery-text-color);
 }
 
 .progect {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-top: -30px;
+  --grid-item: 3;
   list-style: none;
   background: var(--light-color);
-  border: 1px solid #EEEEEE;
+
   box-sizing: border-box;
-  margin-bottom: 94px;
+}
+
+.progect-item {
+  margin-top: 30px;
+  margin-left: 30px;
+  flex-basis: calc((100% - 30px * var(--grid-item)) / var(--grid-item));
+
 }
 
 .page img {
-  margin-bottom: 20px;
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
+.progect-item .page-text {
+  display: block;
+  border: 1px solid #EEEEEE;
+}
 .page p {
+  padding-top: 6px;
+  padding-bottom: 20px; 
+  margin-left: 24px;
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.03em;
@@ -385,10 +430,18 @@ body {
 }
 
 .page h2 {
+  padding-top: 20px;
+  margin-left: 24px;
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--primery-text-color);
   margin-bottom: 9px;
+}
+
+.page p,
+.page h2 {
+  display: block;
+  border:0px 1px 1px 1px solid #EEEEEE;
 }
