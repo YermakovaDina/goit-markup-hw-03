@@ -370,10 +370,6 @@ body {
 
 /*Портфолио*/
 
-.portfolio {
-  padding: 94px 0;
-}
-
 button {
   font-family: inherit;
   font-size: 100%;
@@ -382,6 +378,7 @@ button {
 }
 
 .buttons {
+  margin-bottom: 50px;
   text-align: center;
   list-style: none;
   font-weight: 500;
@@ -393,7 +390,7 @@ button {
 
 .buttons-filter {
   display: inline-block;
-  margin-bottom: 50px;
+
   margin-left: 8px;
   border-style: hidden;
 }
@@ -402,7 +399,6 @@ button {
   margin-left: 0px;
 }
 
-.buttons .filter-dif,
 .buttons .filter:hover,
 .buttons .filter:focus {
   cursor: pointer;
@@ -422,7 +418,7 @@ button {
 .progect {
   display: flex;
   flex-wrap: wrap;
-  /*margin-left: -30px;*/
+  margin-left: -30px;
   margin-top: -30px;
   --grid-item: 3;
   list-style: none;
@@ -444,14 +440,17 @@ button {
 }
 
 .progect-item .page-text {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 24px;
   display: block;
-  border: 1px solid #eeeeee;
+  border-top: 0px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
 }
 
 .page p {
-  padding-top: 4px;
-  padding-bottom: 20px;
-  padding-left: 24px;
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.03em;
@@ -459,8 +458,7 @@ button {
 }
 
 .page h2 {
-  padding-top: 20px;
-  padding-left: 24px;
+  margin-bottom: 4px;
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
