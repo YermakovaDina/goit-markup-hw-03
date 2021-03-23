@@ -304,27 +304,27 @@ body {
   letter-spacing: 0.03em;
 }
 
-.team-item > img {
-  margin-bottom: 30px;
+.team-info {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
-.team-item > p {
+.team p {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--second-test-color);
-  margin-bottom: 30px;
 }
 
 .team h3 {
+  margin-bottom: 10px;
   font-weight: 500;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--primery-text-color);
-  margin-bottom: 10px;
 }
 
 .team-item {
-  height: 368px;
+  background: var(--light-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   flex-basis: calc((100% - 30px * var(--grid-item)) / var(--grid-item));
@@ -343,8 +343,10 @@ body {
   font-style: normal;
 }
 
+.contact {
+  margin-top: 20px;
+}
 .contact-list {
-  padding-top: 20px;
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
@@ -354,10 +356,14 @@ body {
 }
 
 .info {
-  padding-top: 9px;
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
 }
+
+.visual:not(:last-child) {
+  margin-bottom: 9px;
+}
+
 .color-add {
   color: var(--light-color);
 }
